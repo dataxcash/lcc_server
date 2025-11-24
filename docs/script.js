@@ -97,6 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Capability Item Animations
+    const capabilityItems = document.querySelectorAll('.capability-item, .scenario, .practice-item');
+    
+    capabilityItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateY(-5px)';
+            item.style.boxShadow = '0 10px 20px rgba(0, 243, 255, 0.1)';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateY(0)';
+            item.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+        });
+    });
+    
     // Button Hover Effects
     const buttons = document.querySelectorAll('.btn');
     

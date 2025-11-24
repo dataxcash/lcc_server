@@ -21,6 +21,9 @@
                     <li><a href="#licmgm">LicMGM</a></li>
                     <li><a href="#lcdmgm">LCD MGM</a></li>
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
                     <li><a href="#download">Download</a></li>
                 </ul>
                 <div class="hamburger">
@@ -256,6 +259,277 @@
                         </div>
                         <h3>LCD Technology</h3>
                         <p>Innovative hardware decoupling with flexible control mechanisms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section id="capabilities" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>LCC CAPABILITIES</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="capabilities-content">
+                    <div class="capability-category">
+                        <h3><i class="fas fa-key"></i> Core Features</h3>
+                        <div class="capability-grid">
+                            <div class="capability-item">
+                                <h4>Zero-Configuration Authentication</h4>
+                                <p>Self-signed RSA key pairs with no pre-registration required for secure communication.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Declarative Feature Control</h4>
+                                <p>YAML-based configuration for simple, human-readable feature definitions with graceful fallback.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Automatic Usage Tracking</h4>
+                                <p>Built-in quota management with real-time reporting and flexible quota periods.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Product-Level Quotas</h4>
+                                <p>Track total product usage across all instances with capacity planning and automatic reset.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="capability-category">
+                        <h3><i class="fas fa-bolt"></i> Performance & Reliability</h3>
+                        <div class="capability-grid">
+                            <div class="capability-item">
+                                <h4>Smart Caching</h4>
+                                <p>Local caching with configurable TTL to minimize server calls and maximize performance.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Retry Logic</h4>
+                                <p>Automatic retry with exponential backoff for resilient operation in unstable networks.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Offline Support</h4>
+                                <p>Works even when server is temporarily unreachable with fail-graceful degradation.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Advanced Quota Controls</h4>
+                                <p>Rate limiting, concurrency limits, and capacity limits for fine-grained feature control.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="capability-category">
+                        <h3><i class="fas fa-shield-alt"></i> Security & Compliance</h3>
+                        <div class="capability-grid">
+                            <div class="capability-item">
+                                <h4>Audit Trail</h4>
+                                <p>Complete audit trail with usage history, device binding, and access logging.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>Communication Security</h4>
+                                <p>RSA encryption for sensitive data with HTTPS support and token-based authentication.</p>
+                            </div>
+                            
+                            <div class="capability-item">
+                                <h4>License Verification</h4>
+                                <p>Cryptographic signature validation to prevent tampering and unauthorized use.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="capability-category">
+                        <h3><i class="fas fa-server"></i> Deployment Scenarios</h3>
+                        <div class="deployment-scenarios">
+                            <div class="scenario">
+                                <h4>Standalone Deployment</h4>
+                                <p>Single LCC server instance with direct client connections and local SQLite database.</p>
+                            </div>
+                            
+                            <div class="scenario">
+                                <h4>High-Availability Deployment</h4>
+                                <p>Multiple LCC server instances with load balancer frontend and centralized database.</p>
+                            </div>
+                            
+                            <div class="scenario">
+                                <h4>Embedded Deployment</h4>
+                                <p>LCC server embedded in main application with local caching for offline operation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section id="best-practices" class="section dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>BEST PRACTICES</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="best-practices-content">
+                    <div class="practice-category">
+                        <h3><i class="fas fa-code"></i> Feature Definition</h3>
+                        <div class="practice-items">
+                            <div class="practice-item">
+                                <h4>Clear Feature Naming</h4>
+                                <p>Use business-oriented feature IDs that represent capabilities, not implementation details.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h4>Progressive Value</h4>
+                                <p>Each tier should build on the previous with clear value differentiation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-category">
+                        <h3><i class="fas fa-tasks"></i> Quota Configuration</h3>
+                        <div class="practice-items">
+                            <div class="practice-item">
+                                <h4>Balanced Quotas</h4>
+                                <p>Set quotas that align with tier value proposition and realistic usage patterns.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h4>Appropriate Cache TTL</h4>
+                                <p>Balance between freshness and performance with 10-30 seconds for standard features.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-category">
+                        <h3><i class="fas fa-sync-alt"></i> Fallback Strategy</h3>
+                        <div class="practice-items">
+                            <div class="practice-item">
+                                <h4>Meaningful Fallbacks</h4>
+                                <p>Always provide working fallback implementation, not just error messages.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h4>Graceful Degradation</h4>
+                                <p>Consider user experience with informative errors and helpful messaging.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-category">
+                        <h3><i class="fas fa-chart-line"></i> Monitoring & Alerting</h3>
+                        <div class="practice-items">
+                            <div class="practice-item">
+                                <h4>Key Metrics</h4>
+                                <p>Track cache hit rate (>90%), server response time (<100ms), and quota exhaustion events.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h4>Set Alerts</h4>
+                                <p>Alert on license check failure rate > 1%, server unavailability > 5 minutes, and quota resets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>SCENARIO COMPARISON</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="comparison-content">
+                    <div class="scenario-tabs">
+                        <div class="tab-header">
+                            <button class="tab-button active" data-tab="saas">SaaS Application</button>
+                            <button class="tab-button" data-tab="enterprise">Enterprise Software</button>
+                            <button class="tab-button" data-tab="api">API Service</button>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="saas-tab">
+                                <h3>SaaS Application with Tiered Pricing</h3>
+                                <div class="scenario-details">
+                                    <div class="scenario-features">
+                                        <h4>LCC Features Used:</h4>
+                                        <ul>
+                                            <li>✅ Tier-based access control</li>
+                                            <li>✅ Per-feature quotas (API calls, storage)</li>
+                                            <li>✅ Usage tracking and reporting</li>
+                                            <li>✅ Quota reset scheduling</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="scenario-benefits">
+                                        <h4>Benefits:</h4>
+                                        <ul>
+                                            <li>Flexible pricing tiers with clear value differentiation</li>
+                                            <li>Real-time usage analytics for billing insights</li>
+                                            <li>Easy upsell path from trial to paid</li>
+                                            <li>Automatic quota management without code changes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="enterprise-tab">
+                                <h3>On-Premises Enterprise Software</h3>
+                                <div class="scenario-details">
+                                    <div class="scenario-features">
+                                        <h4>LCC Features Used:</h4>
+                                        <ul>
+                                            <li>✅ Hardware binding for seat licensing</li>
+                                            <li>✅ Offline support with caching</li>
+                                            <li>✅ License key validation</li>
+                                            <li>✅ Perpetual license support</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="scenario-benefits">
+                                        <h4>Benefits:</h4>
+                                        <ul>
+                                            <li>Prevent license sharing with hardware binding</li>
+                                            <li>Work in disconnected environments</li>
+                                            <li>Secure license key management</li>
+                                            <li>Compliance with enterprise security requirements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="api-tab">
+                                <h3>API Service with Rate Limiting</h3>
+                                <div class="scenario-details">
+                                    <div class="scenario-features">
+                                        <h4>LCC Features Used:</h4>
+                                        <ul>
+                                            <li>✅ Multiple quota periods (daily, hourly, per-minute)</li>
+                                            <li>✅ Real-time usage reporting</li>
+                                            <li>✅ Automatic quota reset</li>
+                                            <li>✅ Graceful fallback</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="scenario-benefits">
+                                        <h4>Benefits:</h4>
+                                        <ul>
+                                            <li>Precise rate limiting with multiple time periods</li>
+                                            <li>Real-time quota tracking for fair usage</li>
+                                            <li>Automatic quota resets without manual intervention</li>
+                                            <li>Graceful degradation when quotas are exhausted</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

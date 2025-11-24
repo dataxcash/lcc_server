@@ -58,11 +58,13 @@ h2 {
 h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: var(--neon-blue);
 }
 
 h4 {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    color: var(--neon-blue);
 }
 
 p {
@@ -106,7 +108,7 @@ header {
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .nav-links a {
@@ -115,7 +117,7 @@ header {
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     position: relative;
@@ -630,6 +632,178 @@ header {
     margin-bottom: 1rem;
 }
 
+/* Capabilities Section */
+.capabilities-content {
+    margin-top: 2rem;
+}
+
+.capability-category {
+    margin-bottom: 3rem;
+}
+
+.capability-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.capability-category h3 i {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.capability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.capability-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.capability-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 243, 255, 0.1);
+    border-color: var(--neon-blue);
+}
+
+.capability-item h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.deployment-scenarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.scenario {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.scenario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 243, 255, 0.1);
+    border-color: var(--neon-blue);
+}
+
+.scenario h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* Best Practices Section */
+.best-practices-content {
+    margin-top: 2rem;
+}
+
+.practice-category {
+    margin-bottom: 3rem;
+}
+
+.practice-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.practice-category h3 i {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.practice-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.practice-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.practice-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 243, 255, 0.1);
+    border-color: var(--neon-blue);
+}
+
+.practice-item h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* Comparison Section */
+.comparison-content {
+    margin-top: 2rem;
+}
+
+.scenario-tabs {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--glow-shadow);
+}
+
+.scenario-tabs .tab-header {
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.scenario-details {
+    padding: 2rem;
+}
+
+.scenario-details h4 {
+    margin: 1.5rem 0 1rem;
+}
+
+.scenario-features ul,
+.scenario-benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.scenario-features ul li,
+.scenario-benefits ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.scenario-features ul li::before {
+    content: '✓';
+    color: var(--neon-blue);
+    position: absolute;
+    left: 0;
+}
+
+.scenario-benefits ul li::before {
+    content: '⭐';
+    color: var(--neon-pink);
+    position: absolute;
+    left: 0;
+}
+
 /* Download Section */
 .download-content {
     display: grid;
@@ -814,6 +988,20 @@ footer {
     .footer-links {
         grid-template-columns: 1fr 1fr;
     }
+    
+    .capability-grid,
+    .deployment-scenarios,
+    .practice-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -832,6 +1020,7 @@ footer {
         align-items: center;
         padding-top: 2rem;
         transition: 0.3s;
+        overflow-y: auto;
     }
     
     .nav-links.active {
@@ -840,10 +1029,6 @@ footer {
     
     .nav-links li {
         margin: 1rem 0;
-    }
-    
-    .hero h2 {
-        font-size: 2.5rem;
     }
     
     .footer-links {
@@ -856,6 +1041,10 @@ footer {
     
     .mobile {
         display: block;
+    }
+    
+    .nav-links li {
+        margin-left: 0;
     }
 }
 
@@ -878,4 +1067,22 @@ footer {
 
 .pulse {
     animation: pulse 2s infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--neon-blue), var(--neon-pink));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-blue);
 }
