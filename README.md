@@ -1,7 +1,5 @@
 # LCC Server - Next Generation License Control Center
 
-![LCC Server Interface](docs/images/lcc-screenshot.png)
-
 LCC Server is a revolutionary **License Control Center** designed for **Enterprise**, **Internet**, and **AIGC** environments. It represents a new generation of license management systems with unparalleled features that set it apart from traditional solutions.
 
 ## 🌟 Key Features & Advantages
@@ -26,14 +24,20 @@ LCC introduces the innovative **LCD (License Control Dog)** technology that deco
 
 ## 🖼️ LCC Server Interface
 
-The screenshot above shows the actual LCC Server interface running at `https://localhost:8088/`. The interface provides comprehensive license management capabilities including:
+### Dashboard Overview
+![LCC Dashboard](docs/images/lcc-dashboard.png)
 
-- Real-time license monitoring and usage tracking
-- Multi-tenant license management
-- Flexible license policy configuration
-- Detailed analytics and reporting
-- User and permission management
-- API access control
+The dashboard provides a comprehensive overview of your license management system, including real-time usage statistics, system health, and quick access to key features.
+
+### License Management
+![License Management](docs/images/lcc-lic.png)
+
+The license management interface allows you to create, modify, and monitor licenses for your applications. You can define policies, track usage, and manage customer entitlements.
+
+### LCD Management
+![LCD Management](docs/images/lcc-lcd.png)
+
+The LCD (License Control Dog) management interface provides tools to configure and manage hardware decoupling features, ensuring flexible deployment options while maintaining security.
 
 ## 🏗️ Architecture Overview
 
