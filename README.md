@@ -1,6 +1,6 @@
 # LCC Server - Next Generation License Control Center
 
-![LCC Welcome Screen](docs/images/lcc-welcome.png)
+![LCC Server Interface](docs/images/lcc-screenshot.png)
 
 LCC Server is a revolutionary **License Control Center** designed for **Enterprise**, **Internet**, and **AIGC** environments. It represents a new generation of license management systems with unparalleled features that set it apart from traditional solutions.
 
@@ -24,23 +24,16 @@ Built for modern SaaS environments, LCC provides robust support for subscription
 ### 6. Hardware Decoupling with LCD Technology
 LCC introduces the innovative **LCD (License Control Dog)** technology that decouples license management from hardware constraints, providing both flexible control and high availability.
 
-## 🖼️ LCC Interface Overview
+## 🖼️ LCC Server Interface
 
-### License Tiers Comparison
-![License Tiers](docs/images/lcc-tiers.png)
-Compare feature availability across different license tiers with an intuitive interface.
+The screenshot above shows the actual LCC Server interface running at `https://localhost:8088/`. The interface provides comprehensive license management capabilities including:
 
-### SDK Integration Examples
-![Setup](docs/images/lcc-setup.png)
-Real-world examples of integrating LCC SDK into your applications with minimal code changes.
-
-### Runtime Monitoring Dashboard
-![Runtime](docs/images/lcc-runtime.png)
-Monitor license usage and enforcement in real-time with comprehensive dashboards.
-
-### Usage Limitations Visualization
-![Limits](docs/images/lcc-limits.png)
-Understand different limitation models including quotas, throughput, capacity, and concurrency controls.
+- Real-time license monitoring and usage tracking
+- Multi-tenant license management
+- Flexible license policy configuration
+- Detailed analytics and reporting
+- User and permission management
+- API access control
 
 ## 🏗️ Architecture Overview
 
@@ -76,7 +69,7 @@ LCC provides a powerful SDK for seamless integration with your applications:
 ```yaml
 # lcc-features.yaml
 sdk:
-  lcc_url: "http://localhost:8088"
+  lcc_url: "https://localhost:8088"
   product_id: "my-enterprise-app"
   product_version: "1.0.0"
 
