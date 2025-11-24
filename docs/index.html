@@ -3,39 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LCC Server - Next Generation License Control</title>
+    <title>LCC Server - Next Generation License Control Center</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Cyberpunk-themed header with animated elements -->
     <header>
-        <h1>LCC Server</h1>
-        <p>Next Generation License Control System</p>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>LCC<span>SERVER</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#licmgm">LicMGM</a></li>
+                    <li><a href="#lcdmgm">LCD MGM</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#download">Download</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            
+            <div class="hero">
+                <h2 class="glitch" data-text="LICENSE CONTROL CENTER">LICENSE CONTROL CENTER</h2>
+                <p>Next-Gen License Management for Enterprise, Internet & AIGC</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn primary">Get Started</a>
+                    <a href="https://github.com/dataxcash/lcc_server" class="btn secondary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
     </header>
-    
+
+    <!-- Main content sections -->
     <main>
-        <section class="hero">
-            <h2>Revolutionary License Management</h2>
-            <p>LCC Server is a cutting-edge license control system designed for modern applications.</p>
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>DASHBOARD OVERVIEW</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>Comprehensive System Monitoring</h3>
+                        <p>The LCC Dashboard provides real-time insights into your license ecosystem with intuitive visualizations and key performance indicators.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Real-time Analytics</h4>
+                                    <p>Monitor license usage, system health, and performance metrics in real-time.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <i class="fas fa-bell"></i>
+                                <div>
+                                    <h4>Smart Alerts</h4>
+                                    <p>Receive proactive notifications for expiring licenses, usage spikes, and system anomalies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <h4>Performance Metrics</h4>
+                                    <p>Track system performance with detailed metrics and historical trends.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="image-content">
+                        <div class="image-container">
+                            <img src="images/lcc-dashboard.png" alt="LCC Dashboard Interface">
+                            <div class="image-caption">LCC Server Dashboard - Real-time System Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        
-        <section class="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li>Real-time License Monitoring</li>
-                <li>Multi-platform Support</li>
-                <li>Easy Integration</li>
-                <li>Scalable Architecture</li>
-            </ul>
+
+        <!-- LicMGM Section -->
+        <section id="licmgm" class="section dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>LICENSE MANAGEMENT</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="content-grid reverse">
+                    <div class="image-content">
+                        <div class="image-container">
+                            <img src="images/lcc-lic.png" alt="LCC License Management Interface">
+                            <div class="image-caption">LCC License Management - Online & Offline Capabilities</div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-content">
+                        <h3>Hybrid Online/Offline Licensing</h3>
+                        <p>LCC's revolutionary dual-mode licensing system seamlessly supports both connected and disconnected environments.</p>
+                        
+                        <div class="tabs">
+                            <div class="tab-header">
+                                <button class="tab-button active" data-tab="online">Online Mode</button>
+                                <button class="tab-button" data-tab="offline">Offline Mode</button>
+                            </div>
+                            
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="online-tab">
+                                    <h4>Connected Environment</h4>
+                                    <ul>
+                                        <li>Real-time license validation and synchronization</li>
+                                        <li>Centralized policy management and enforcement</li>
+                                        <li>Instant revocation and suspension capabilities</li>
+                                        <li>Dynamic quota adjustments without client updates</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tab-pane" id="offline-tab">
+                                    <h4>Disconnected Environment</h4>
+                                    <ul>
+                                        <li>Self-contained license validation with cryptographic signatures</li>
+                                        <li>Pre-configured quota allocations for extended periods</li>
+                                        <li>Secure time-stamping to prevent rollback attacks</li>
+                                        <li>Graceful degradation with local policy enforcement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        
-        <section class="getting-started">
-            <h2>Getting Started</h2>
-            <p>Visit our <a href="https://github.com/dataxcash/lcc_server">GitHub repository</a> to learn more.</p>
+
+        <!-- LCD MGM Section -->
+        <section id="lcdmgm" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>LCD MANAGEMENT</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>License Control Dog (LCD) Technology</h3>
+                        <p>LCC's patent-pending LCD technology decouples licensing from hardware constraints while maintaining security.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-unlink"></i>
+                                <div>
+                                    <h4>Hardware Independence</h4>
+                                    <p>Deploy licenses without binding to specific hardware identifiers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Security Without Constraints</h4>
+                                    <p>Maintain enterprise-grade security without hardware lock-in.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <i class="fas fa-sync-alt"></i>
+                                <div>
+                                    <h4>Flexible Migration</h4>
+                                    <p>Easily transfer licenses between environments and platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="image-container mobile">
+                            <img src="images/lcc-lcd.png" alt="LCC LCD Management Interface">
+                            <div class="image-caption">LCC LCD Management - Hardware Decoupling Technology</div>
+                        </div>
+                    </div>
+                    
+                    <div class="image-content">
+                        <div class="image-container">
+                            <img src="images/lcc-lcd.png" alt="LCC LCD Management Interface">
+                            <div class="image-caption">LCC LCD Management - Hardware Decoupling Technology</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unique Features Section -->
+        <section id="features" class="section dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>UNIQUE FEATURES</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-feather"></i>
+                        </div>
+                        <h3>Zero Intrusion</h3>
+                        <p>Near-zero code changes required for integration with existing applications.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Config-Driven</h3>
+                        <p>Powerful compiler technology generates all components from simple configurations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI-Powered</h3>
+                        <p>Generate complete configurations from simple natural language prompts.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Hybrid Support</h3>
+                        <p>Seamlessly operate in both online and offline enterprise environments.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Internet Ready</h3>
+                        <p>Built for modern SaaS environments with subscription licensing support.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dog"></i>
+                        </div>
+                        <h3>LCD Technology</h3>
+                        <p>Innovative hardware decoupling with flexible control mechanisms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>GET STARTED</h2>
+                    <div class="glitch-bar"></div>
+                </div>
+                
+                <div class="download-content">
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Download</h3>
+                            <p>Get the latest version of LCC Server for your platform.</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Install</h3>
+                            <p>Follow our simple installation guide to set up LCC Server.</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Configure</h3>
+                            <p>Define your licensing policies and deploy to production.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="installation-guide">
+                        <h3>Quick Installation</h3>
+                        <pre><code># Clone the repository
+git clone git@github.com:dataxcash/lcc_server.git
+
+# Navigate to release directory
+cd release/v1.0/[platform]/amd64
+
+# Build Docker image
+docker build -t lcc-server .
+
+# Run container
+docker run -p 8088:8088 lcc-server</code></pre>
+                        
+                        <div class="download-buttons">
+                            <a href="#" class="btn primary"><i class="fab fa-linux"></i> Linux</a>
+                            <a href="#" class="btn primary"><i class="fab fa-windows"></i> Windows</a>
+                            <a href="#" class="btn primary"><i class="fab fa-apple"></i> macOS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 LCC Server. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>LCC<span>SERVER</span></h2>
+                    <p>Next Generation License Control Center</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Documentation</h4>
+                        <ul>
+                            <li><a href="#">Getting Started</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Configuration</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">SDK Documentation</a></li>
+                            <li><a href="#">Demo Application</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/dataxcash/lcc_server"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 LCC Server. All rights reserved. | Designed with <i class="fas fa-heart"></i> for the future of licensing</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
